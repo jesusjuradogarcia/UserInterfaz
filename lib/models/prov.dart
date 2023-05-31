@@ -1,11 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class DoctorModel {
+class Provedor {
   final String name;
   final String position;
   final int averageReview;
   final int totalReviews;
   final String profile;
-  DoctorModel({
+  Provedor({
     required this.name,
     required this.position,
     required this.averageReview,
@@ -14,26 +14,26 @@ class DoctorModel {
   });
 }
 
-final List<DoctorModel> nearbyDoctors = [
-  DoctorModel(
-    name: "Luke Holland",
-    position: "General Practitioner",
+final List<Provedor> provedores = [
+  Provedor(
+    name: "Rogelio Franco",
+    position: "repartidor",
     averageReview: 0,
     totalReviews: 0,
-    profile: "assets/doctor_1.jpg",
+    profile: "assets/paco.jpg",
   ),
-  DoctorModel(
-    name: "Sophie Harmon",
-    position: "General Practitioner",
+  Provedor(
+    name: "David Ramirez",
+    position: "departamento de deportes",
     averageReview: 0,
     totalReviews: 0,
-    profile: "assets/doctor_2.jpg",
+    profile: "assets/david.jpg",
   ),
-  DoctorModel(
-    name: "Louise Reid",
-    position: "General Practitioner",
+  Provedor(
+    name: "Oger Varela",
+    position: "departamento de ropa",
     averageReview: 2,
     totalReviews: 0,
-    profile: "assets/doctor_3.jpg",
+    profile: "assets/oger.jpg",
   ),
 ];

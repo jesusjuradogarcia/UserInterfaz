@@ -1,25 +1,25 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-class HealthNeeds extends StatelessWidget {
-  const HealthNeeds({Key? key}) : super(key: key);
+class Servicios extends StatelessWidget {
+  const Servicios({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    List<CustomIcon> customIcons = [
-      CustomIcon(name: "Appointment", icon: 'assets/appointment.png'),
-      CustomIcon(name: "Hospital", icon: 'assets/hospital.png'),
-      CustomIcon(name: "Covid-19", icon: 'assets/virus.png'),
-      CustomIcon(name: "More", icon: 'assets/more.png'),
+    List<CostumbreIcon> costumbreIcons = [
+      CostumbreIcon(name: "las torres", icon: 'assets/torres.jpg'),
+      CostumbreIcon(name: "las misiones", icon: 'assets/misiones.jpg'),
+      CostumbreIcon(name: "plaza sendero", icon: 'assets/sendero.jpg'),
+      CostumbreIcon(name: "plaza juarez", icon: 'assets/juarez.jpg'),
     ];
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(customIcons.length, (index) {
+      children: List.generate(costumbreIcons.length, (index) {
         return Column(
           children: [
             Container(
-              width: 60,
-              height: 60,
+              width: 70,
+              height: 70,
               padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Theme.of(context)
@@ -29,11 +29,11 @@ class HealthNeeds extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: Image.asset(
-                customIcons[index].icon,
+                costumbreIcons[index].icon,
               ),
             ),
             const SizedBox(height: 6),
-            Text(customIcons[index].name)
+            Text(costumbreIcons[index].name)
           ],
         );
       }),
@@ -41,10 +41,10 @@ class HealthNeeds extends StatelessWidget {
   }
 }
 
-class CustomIcon {
+class CostumbreIcon {
   final String name;
   final String icon;
-  CustomIcon({
+  CostumbreIcon({
     required this.name,
     required this.icon,
   });
